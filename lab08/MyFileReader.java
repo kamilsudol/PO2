@@ -22,9 +22,10 @@ public class MyFileReader {
                 this.add(command);
             }
             reader.close();
+            System.out.println("Pomyslnie otwarto plik!");
         }catch(FileNotFoundException e){
-            System.out.println("Plik o podanej nazwie nie istnieje!");
-            e.printStackTrace();
+            System.out.println("Wczytywany plik o podanej nazwie nie istnieje!");
+            //e.printStackTrace();
             System.exit(1);
         }
     }
@@ -34,8 +35,8 @@ public class MyFileReader {
             int tmp = Integer.parseInt(x);
             elements.add(tmp);
         }catch (NumberFormatException e){
-            System.out.println("Podany ciag w pliku nie jest liczba!");
-            e.printStackTrace();
+            System.out.println("Podany ciag w pliku nie jest typu Integer!");
+            //e.printStackTrace();
             System.exit(1);
         }
     }
@@ -58,19 +59,19 @@ public class MyFileReader {
             }
         }catch(ArrayIndexOutOfBoundsException e){
             System.out.println("Zly indeks tablicy!");
-            e.printStackTrace();
+            //e.printStackTrace();
             System.exit(1);
         }catch(DivZeroByZeroException e){
             e.what();
-            e.printStackTrace();
+            //e.printStackTrace();
             System.exit(1);
         }catch(DivByZeroException e){
             e.what();
-            e.printStackTrace();
+            //e.printStackTrace();
             System.exit(1);
         }catch(ArithmeticException e){
             System.out.println("Przekroczono dopuszczalna wartosc int!");
-            e.printStackTrace();
+            //e.printStackTrace();
             System.exit(1);
         }
     }
@@ -80,9 +81,10 @@ public class MyFileReader {
             FileWriter f2 = new FileWriter(file_out);
             f2.write(Double.toString(avg));
             f2.close();
+            System.out.println("Pomyslnie zapisano do pliku!");
         }catch(IOException e){
             System.out.println("Nieznany blad przy probie zapisu do pliku!");
-            e.printStackTrace();
+            //e.printStackTrace();
             System.exit(1);
         }
     }

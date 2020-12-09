@@ -13,7 +13,7 @@ public class lab08 {
             }
         }catch(MyIOException e){
             e.what();
-            e.printStackTrace();
+            //e.printStackTrace();
             System.exit(1);
         }
     }
